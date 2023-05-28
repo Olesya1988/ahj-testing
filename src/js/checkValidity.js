@@ -12,10 +12,10 @@ export default function check() {
     e.preventDefault();
 
     if (luhnAlgorithm(input.value)) {
-      checking.innerHTML = '<span>&#9989; The credit card number you entered passed the Luhn Check and is therefore a valid credit card number!</span>';
+      checking.innerHTML = '<span class="valid">&#9989; The credit card number you entered passed the Luhn Check and is therefore a valid credit card number!</span>';
       input.value = '';
     } else {
-      checking.innerHTML = '<span>&#10060; The credit card number you entered failed the Luhn Check. It is not valid, did you make a typo?</span>';
+      checking.innerHTML = '<span class="invalid">&#10060; The credit card number you entered failed the Luhn Check. It is not valid, did you make a typo?</span>';
       input.value = '';
     }
   });
